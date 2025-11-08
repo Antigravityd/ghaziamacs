@@ -1,0 +1,17 @@
+* Towerfile
+
+- Gpt.el
+- Dashboard with pink drawy images
+- Mouse mode?
+- Use guix shell to make static builds of everything
+- browse-url opens actual browser
+- treemacs
+  - treemacs-nerd-icons?
+- tab-bar-mode
+- highlight-indentation
+- prog lang modes
+- cua mode
+- Edwina
+  - shift-arrow to control window
+- ctrl-click to projectile-find-implementation
+- Extremely complete eglot integration
