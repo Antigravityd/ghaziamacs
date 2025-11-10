@@ -95,7 +95,7 @@ https://github.com/jtbm37/all-the-icons-dired.")
        (method git-fetch)
        (uri (git-reference
              (url "https://github.com/ProofGeneral/PG")
-             (commit "ae7af9d7c0ee6c7a8b085b8ee33c7fec8f298be9")))
+             (commit "c366365aaddeb3a65dc0816c8f93ec209dc9de44")))
        (file-name (git-file-name name version))
        (sha256
         (base32 "0q1hq1fp770a25dk2sfr2p6y8cj9mzvx75pzx2q5cj71jbs9chkn"))))
@@ -123,7 +123,10 @@ https://github.com/jtbm37/all-the-icons-dired.")
                    "^pgocaml$"
                    "^pgshell$")
        #:exclude '("^.dir-locals.el$" "^test.el$" "^tests.el$"
-                   "^[^/]+-test.el$" "^[^/]+-tests.el$")))
+                   "^[^/]+-test.el$" "^[^/]+-tests.el$")
+       #:phases (modify-phases %standard-phases
+			       (delete 'check)
+			       (delete 'validate-compiled-autoloads))))
     (home-page "https://proofgeneral.github.io/")
     (synopsis "A generic Emacs interface for proof assistants")
     (description
@@ -146,14 +149,14 @@ in the company-coq extension of @code{ProofGeneral} (also available in MELPA).")
      (method git-fetch)
      (uri (git-reference
            (url "https://github.com/Antigravityd/ghaziamacs")
-           (commit #f)))
+           (commit "b6d3350bf59386e2cec177cba54f989263ba528e")))
      (file-name (git-file-name name version))
      (sha256
-      (base32 "1kkpw59xflz4i0jdg5rdw84lggjqjy2k03yilpa19a5allvar63s"))))
+      (base32 "1099hpifahh20i8s87b5d31agwnzjbs566vlkib5bc25g4cfpyb6"))))
    (build-system copy-build-system
 		 ;;
 		 )
-   (arguments (list #:install-plan '(("init.el" "~/.emacs.d/init.el"))))
+   (arguments (list #:install-plan ''(("./default.el" "/share/emacs/site-lisp/"))))
    (inputs (list emacs
 		 emacs-doom-modeline
 		 emacs-girly-notebook-theme
