@@ -149,7 +149,7 @@ in the company-coq extension of @code{ProofGeneral} (also available in MELPA).")
      (method git-fetch)
      (uri (git-reference
            (url "https://github.com/Antigravityd/ghaziamacs")
-           (commit "b6d3350bf59386e2cec177cba54f989263ba528e")))
+           (commit "2e459746820d1ddc4e23b49a8a9ac1a0da4b2c7c")))
      (file-name (git-file-name name version))
      (sha256
       (base32 "1099hpifahh20i8s87b5d31agwnzjbs566vlkib5bc25g4cfpyb6"))))
